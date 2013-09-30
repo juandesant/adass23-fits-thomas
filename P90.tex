@@ -162,8 +162,8 @@ FITS-IDI \citep{2011AIPS114}, and to validate the contents against a
 namespaced schema.
 
 The allowed character set in FITS of 7-bit US-ASCII is overly restrictive in a
-Unicode world. It is unacceptable that FITS authors cannot use special 
-scientific or mathematical symbols (ex. a degree symbol) or capture 
+Unicode world. It is unacceptable that FITS authors cannot use special
+scientific or mathematical symbols (e.g.\ a degree symbol) or capture
 non-English text in tables or FITS headers.
 
 \subsection{Missing data models}
@@ -191,20 +191,16 @@ e.g.][]{1998ASPC..145...41W,2012ASPC..461..825B,O35_adassxxii}.
 
 \subsection{Inflexibility in representing metadata and data}
 
-The 80 character card drives a number of subsequent limitations which
-result in poor metadata description (8 character keyword, max 68 character keyword values, and ackward continuation constructs). 
-This out-dated restriction also results in the awkward implementation 
-of some conventions, such as ESO HIERARCH \citep{2009Wic}, that can not 
-overcome the underlying limitations of representation. Additionally, the lack of 
-namespaces and uncertainty over metadata meaning with other FITS files.
-Finally, the 2880 record is a minor but annoying restriction which results
-in wasteful blocks of whitespace in many FITS files and impedes the use
-of FITS to capture very small, but richly described
-data, and also impedes real-time writing of FITS files.
-% Juande Santander-Vela: The justification for the last statement 
-% is that blocks must be ready while writing data, and hence either
-% the FITS size balloons, or they cannot be properly written in
-% real time, but converted from other format at a later stage.
+The 80-character card image drives a number of subsequent limitations which
+result in poor metadata description (8-character keyword, 68-character limit in
+keyword values, and cumbersome CONTINUE card constructs).  This out-dated
+restriction also results in the awkward implementation of some conventions, such
+as ESO HIERARCH \citep{2009Wic}, that can not overcome the underlying
+limitations of representation. Additionally, the lack of namespaces results in
+uncertainty over metadata meaning with other FITS files. Finally, the 2880
+record is a minor but annoying restriction which results in wasteful blocks of
+whitespace in many FITS files, hampers the use of FITS to capture very small,
+but richly described data, and impedes the real-time writing of FITS files.
 
 \subsection{Inadequate support for large, distributed data}
 
